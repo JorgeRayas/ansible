@@ -4,10 +4,10 @@
   
   tasks:
   - name: Agregamos repo de WEBMIN
-    #shell: deb http://download.webmin.com/download/repository sarge contrib >> /etc/apt/webmin.sources.list
-    apt_repository:
-      repo: "deb http://download.webmin.com/download/repository sarge contrib"
-      state: present
+    shell: deb http://download.webmin.com/download/repository sarge contrib >> /etc/apt/webmin.sources.list
+    #apt_repository:
+    #  repo: "deb http://download.webmin.com/download/repository sarge contrib"
+    #  state: present
   
 #  - name: Agregamos la llave
 #    apt_key:
