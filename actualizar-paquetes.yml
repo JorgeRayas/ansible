@@ -6,7 +6,7 @@
   - name: Actualizar cache
     apt: update_cache=yes
 
-  - name: Instalar actualizaciones de seguridad
+  - name: Instalar actualizaciones de paquetes
     #shell: apt-get upgrade -y
     apt:
       name: "*"
