@@ -9,18 +9,18 @@
       repo: "deb http://download.webmin.com/download/repository sarge contrib"
       state: present
   
-  - name: Agregamos la llave
-    apt_key:
-      url: "http://www.webmin.com/jcameron-key.asc"
-      state: present
-
-  - name: Actualizar cache
-    apt: update_cache=yes
-
-  - name: Instalar webmin
-    apt:
-      name: webmin
-      state: latest
+#  - name: Agregamos la llave
+#    apt_key:
+#      url: "http://www.webmin.com/jcameron-key.asc"
+#      state: present
+#
+#  - name: Actualizar cache
+#    apt: update_cache=yes
+#
+#  - name: Instalar webmin
+#    apt:
+#      name: webmin
+#      state: latest
 
 #  - name: Habilitar puerto
 #    community.general.ufw:
