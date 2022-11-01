@@ -1,5 +1,5 @@
 ---
-- hosts: Ubuntu_Leon
+- hosts: ubuntu
   become: yes
 
   tasks:
