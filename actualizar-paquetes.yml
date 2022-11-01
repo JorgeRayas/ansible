@@ -1,0 +1,11 @@
+- hosts: ubuntu
+  become: yes
+
+  - name: Actualizar cache
+    apt: update_cache=yes
+
+  - name: Instalar actualizaciones de seguridad
+    #shell: apt-get upgrade -y
+    apt:
+      name: "*"
+      state: latest
