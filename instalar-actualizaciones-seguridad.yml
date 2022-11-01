@@ -1,0 +1,13 @@
+---
+- hosts: Ubuntu_Leon
+  become: yes
+
+  tasks:
+  - name: Copiar repos de seguridad
+    shell: cat /etc/apt/sources.list | grep secu > /etc/apt/security.sources.list
+
+  - name: Actualizar cache
+    apt: update_cache=yes
+
+  - name: Instalar actualizaciones de seguridad
+    shell: apt-get upgrade -oDir::Etc::SourceList=/etc/apt/security.sources.list --force-yes -y
