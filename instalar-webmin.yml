@@ -21,7 +21,8 @@
     apt:
       name: webmin
       state: latest
+
   - name: Habilitar puerto
-    ufw:
+    community.general.ufw:
       rule: allow
       port: '10000'
